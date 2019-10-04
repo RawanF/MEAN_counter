@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>counter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Real Visits: <%= real %></h1>
+        <h1>counter: <%= counter %></h1>
+        <form action="/destroy_session" method="POST">
+            <button id="reset" type="submit">Reset</button>
+        </form>
+        <form action="/increase_session" method="POST">
+            <span>Increase number of visits by:</span>
+            <select name="num">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button id="increase" type="submit">Add visits!</button>
+        </form>
+    </div>
+</body>
+</html>
